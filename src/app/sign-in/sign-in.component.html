@@ -1,0 +1,44 @@
+<div class="body">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="row d-flex justify-content-center">
+          <div class="whole col-sm-5 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+            <h1 class="text-light">Welcome Back to PennyWise.</h1>
+            <small class="text-light">Don't have an account? SignUp</small>
+
+            <div class="alert alert-danger" *ngIf="message">
+              <p class="errormsg text-center">{{ message | uppercase }}</p>
+            </div>
+
+            <mat-form-field class="example-full-width w-100" appearance="fill">
+              <mat-label class="text-light">Email</mat-label>
+              <input matInput class="text-light" [(ngModel)]="email" />
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width w-100" appearance="fill">
+              <mat-label class="text-light">Password</mat-label>
+              <input
+                matInput
+                class="text-light"
+                [(ngModel)]="password"
+                type="password"
+              />
+            </mat-form-field>
+
+            <div>
+              <button
+                mat-raised-button
+                color=""
+                class="signUp mt-2"
+                (click)="signIn()"
+              >
+                SIGN IN
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

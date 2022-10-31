@@ -1,0 +1,47 @@
+/* .body{
+  background-color: #F7FBFE;
+  height: 100vh;
+}
+.displaySection{
+  width: 100%;
+  height: 30vh;
+  background-color: #7CB3FB;
+  border-radius: 30px;
+
+}
+.createBudgetBtn{
+  margin-top: 5vh;
+}
+.addItemBtn {
+  background-color:  #7CB3FB;
+  color: white;
+} */
+
+.body{
+  background-color: #313142;
+  height: 100vh;
+}
+.whole{
+  height: 60vh;
+  width: 60%;
+  background-color: #444354;
+  margin-top: 10vh;
+  border-radius: 20px;
+
+
+}
+.budgetBtn{
+  width: 30vh;
+  height: 6vh;
+  background-color: lightgreen;
+  font-weight: 600;
+  outline: none;
+  border: none;
+  color: #313142;
+}
+.budgetBtn:hover{
+  background-color: #313142;
+  color: white;
+}
+
+

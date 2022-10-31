@@ -1,0 +1,24 @@
+<div class="body">
+  <div class="container">
+    <div class="whole">
+      <h1 class="text-center text-light display-6">Existing Wallets</h1>
+
+
+      <div class=" mt-3">
+
+        <div class="each " *ngFor="let wallet of currentUserWallet;
+        let i=index">
+          <h4 class="p-3 text-light">{{wallet.category}}</h4>
+
+          <h6 class="display-6 text-end text-light">#{{wallet.amount}}:00</h6>
+          <div class="d-flex justify-content-end">
+            <button class="addItemBtn" routerLink={{wallet._id}}>Create Budget</button>
+
+          </div>
+          <hr class="text-light"/>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
