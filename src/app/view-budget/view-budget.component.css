@@ -1,0 +1,16 @@
+.body{
+  height: 100vh;
+  background-color: #313142;
+}
+.each
+{
+font-size: 2vh;
+}
+.editBtn{
+  background-color: white;
+  color: black;
+}
+.deleteBtn{
+  background-color:red ;
+  color: white;
+}

@@ -1,0 +1,240 @@
+<!-- <div class="body">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-4 col-xl-3">
+            <div class="displaySection mt-3">
+              <h3 class="text-center text-light">Budget</h3>
+              <b class="ms-3 text-light"
+                >Available Budget: #{{ accountBalance }}:00</b
+              >
+              <br />
+              <b class="ms-3 text-light">Total Item Added: #{{ total }}:00</b>
+
+              <div class="d-flex justify-content-center"> -->
+                <!-- Button trigger modal -->
+                <!-- <button
+                  type="button"
+                  class="createBudgetBtn btn btn-light"
+                  data-bs-toggle="modal"
+                  data-bs-target="#staticBackdrop"
+                >
+                  Create Your Budget >
+                </button>
+              </div>
+            </div> -->
+
+            <!-- Modal -->
+            <!-- <div
+              class="modal fade"
+              id="staticBackdrop"
+              data-bs-backdrop="static"
+              data-bs-keyboard="false"
+              tabindex="-1"
+              aria-labelledby="staticBackdropLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">
+                      Create your budget
+                    </h5>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Account Name"
+                      [(ngModel)]="accountName"
+                    />
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Account Balance"
+                      [(ngModel)]="accountBalance"
+                    />
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-bs-dismiss="modal"
+                    >
+                      Close
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-primary"
+                      data-bs-dismiss="modal"
+                    >
+                      Save
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> -->
+          <!-- <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4">
+            <div>
+              <h1 class="text-center">Create Item</h1>
+              <div>
+                <input
+                  type="text"
+                  class="form-control mt-3"
+                  placeholder="Item"
+                  [(ngModel)]="item"
+                  maxlength="7"
+                />
+                <input
+                  type="number"
+                  class="form-control mt-3"
+                  placeholder="Price"
+                  [(ngModel)]="price"
+                />
+                <input
+                  type="number"
+                  class="form-control mt-3"
+                  placeholder="Quantity"
+                  [(ngModel)]="quantity"
+                />
+              </div>
+              <div class="alert alert-danger" *ngIf="errorMsg">
+                {{ errorMsg }}
+              </div>
+              <div class="">
+                <button class="addItemBtn w-100 btn mt-3" (click)="addItem()">
+                  Add Item
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-12 col-md-12 col-lg-4 col-xl-5">
+            <h1 class="text-center">My Item</h1>
+            <div>
+              <table border="2" class="table table-striped">
+                <tr>
+                  <th>S/N</th>
+                  <th>Item</th>
+                  <th>Price(#)</th>
+                  <th>Quantity</th>
+                </tr>
+
+                <tr *ngFor="let item of itemArray; let i = index">
+                  <td>{{ i + 1 }}</td>
+                  <td>{{ item.item }}</td>
+                  <td>{{ item.price }}</td>
+                  <td>{{ item.quantity }}</td>
+                  <button class="btn btn-danger" (click)="deleteBtn(i)">x</button>
+                  <button (click)="getItemBtn(i)"    data-bs-toggle="modal"
+                  data-bs-target="#staticBackdropEdit" class="btn btn-primary">edit</button>
+
+                </tr>
+              </table>
+            </div>
+          </div> -->
+
+    <!-- Modal -->
+    <!-- <div
+    class="modal fade"
+    id="staticBackdropEdit"
+    data-bs-backdrop="static"
+    data-bs-keyboard="false"
+    tabindex="-1"
+    aria-labelledby="staticBackdropLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">
+            Edit
+          </h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Item"
+            value={{item}}
+
+          />
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Price"
+            value={{price}}
+
+          />
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Quantity"
+            value={{quantity}}
+          />
+        </div>
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
+            Close
+          </button>
+          <button
+            type="button"
+            class="btn btn-primary"
+            data-bs-dismiss="modal"
+            (click)="saveEditedBudget()"
+          >
+            Save
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+
+<div class="body">
+  <h1 class="text-light">Hello {{currentUserName|uppercase}}</h1>
+  <div class="container d-flex justify-content-center " >
+    <div class="whole ">
+      <h1 class="text-light text-center display-6 mt-2">Track your spending seamlessly....</h1>
+
+      <div class="d-flex justify-content-center mt-5" >
+        <button class="budgetBtn" (click)="createBudget()" >Create Wallet </button>
+
+
+      </div>
+      <div class="d-flex justify-content-center mt-5" >
+        <button class="budgetBtn" (click)="viewWallet()">View Wallets</button>
+      </div>
+
+
+
+    </div>
+
+
+  </div>
+
+</div>

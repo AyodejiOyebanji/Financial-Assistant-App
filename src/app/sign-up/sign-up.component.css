@@ -1,0 +1,35 @@
+.body{
+  background-color: #313142;
+  height: 100vh;
+}
+.whole{
+  height: 70vh;
+  /* width: 100%; */
+  background-color: #444354;
+  margin-top: 10vh;
+  border-radius: 20px;
+}
+.signUp{
+  width: 100%;
+  height: 6vh;
+  background-color: lightgreen;
+  font-weight: 600;
+  outline: none;
+  border: none;
+  color: #313142;
+}
+/* .signUp:hover{
+  background-color: #313142;
+  color: white;
+} */
+.alert{
+  height: 6vh;
+}
+.errormsg {
+  font-size: 2vh;
+}
+
+.mat-form-field {
+  color: white !important;
+  outline: white !important;
+}

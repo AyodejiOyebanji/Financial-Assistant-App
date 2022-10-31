@@ -1,0 +1,71 @@
+<div class="body">
+  <div class="container">
+    <h1 class="text-light text-center display-6">My Budget</h1>
+    <div>
+      <table border="2" class="table table-striped">
+        <tr>
+          <th class="text-light">S/N</th>
+          <th class="text-light">ITEM</th>
+          <th class="text-light">AMOUNT</th>
+          <th class="text-light">DATE</th>
+        </tr>
+        <tr *ngFor="let budget of currentBudgetList; let i = index">
+          <th class="each text-light display-6">{{ i + 1 }}</th>
+          <th class="each text-light display-6">{{ budget.item |uppercase }}</th>
+          <th class="each text-light display-6">#{{ budget.amount }}</th>
+          <th class="each text-light display-6">{{ budget.date }}</th>
+          <th>
+            <button mat-raised-button color="danger" class="deleteBtn  mt-2" (click)="deleteBudget(i)" >DELETE </button></th>
+          <th>
+
+            <button mat-raised-button color="" class="editBtn  mt-2" (click)="editBtn(i)"  data-bs-toggle="modal" data-bs-target="#staticBackdrop">EDIT</button></th>
+
+            <th>
+
+           
+            <!-- Modal -->
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="alert alert-danger" *ngIf="message">
+                      {{message|uppercase}}
+
+                    </div>
+
+
+                    <mat-form-field class="example-full-width w-100" appearance="fill">
+                      <mat-label class="text-dark">Item</mat-label>
+                      <input matInput class="text-dark " [(ngModel)]="item">
+                    </mat-form-field>
+                    <mat-form-field class="example-full-width w-100" appearance="fill">
+                      <mat-label class="text-dark">Amount</mat-label>
+                      <input matInput class="text-dark " [(ngModel)]="amount">
+                    </mat-form-field>
+
+                    <mat-form-field class="example-full-width w-100" appearance="fill">
+                      <mat-label class="text-dark">Date</mat-label>
+                      <input matInput class="text-dark " [(ngModel)]="date" type="date">
+                    </mat-form-field>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" (click)="save()" class="btn btn-primary" data-bs-dismiss="modal">Save</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </tr>
+      </table>
+
+      <div class="text-light">
+        <h1 class="text-end display-4">Total: #{{total}}:00</h1>
+
+      </div>
+    </div>
+  </div>
+</div>

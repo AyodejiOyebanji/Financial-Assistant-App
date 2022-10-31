@@ -1,0 +1,30 @@
+<div class="body">
+  <h1 class="text-light">Hello {{ currentUserName|uppercase}}</h1>
+  <div class="container d-flex justify-content-center">
+    <div class="createWallet ">
+      <div>
+        <h4 class="text-light display-6">Set Up your Wallet to Track your Spending Category </h4>
+      </div>
+      <div class="alert alert-danger d-flex justify-content-center" *ngIf="message">
+        {{message}}
+      </div>
+
+      <mat-form-field class="example-full-width w-100" appearance="fill">
+        <mat-label class="text-light">Category</mat-label>
+        <input matInput class="text-light " [(ngModel)]="category">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width w-100" appearance="fill">
+        <mat-label class="text-light">Amount</mat-label>
+        <input matInput class="text-light " [(ngModel)]="amount">
+      </mat-form-field>
+
+
+      <button class="createWalletBtn mt-3" (click)="createWalletBtn()">Create Wallet</button>
+      <button class="createWalletBtn mt-3" routerLink="/viewwallet">View Wallets</button>
+
+    </div>
+
+  </div>
+
+</div>

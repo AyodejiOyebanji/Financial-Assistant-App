@@ -1,0 +1,54 @@
+<div class="body">
+  <div class="container d-flex justify-content-center">
+    <div class="whole">
+      <h1 class="text-center text-light display-6">Create Budget</h1>
+
+      <div class="alert alert-danger" *ngIf="message">
+        <p class="text-center">{{ message|uppercase }}</p>
+      </div>
+
+      <div>
+        <input
+          type="text"
+          placeholder="Item"
+          class="form-control mt-4"
+          [(ngModel)]="item"
+        />
+        <input
+          type="number"
+          placeholder="Amount"
+          class="form-control mt-3"
+          [(ngModel)]="amount"
+        />
+        <input
+          type="date"
+          placeholder="Deadline"
+          class="form-control mt-3"
+          [(ngModel)]="date"
+        />
+      </div>
+
+      <div class="d-flex justify-content-center mt-3">
+        <button class="addBudget" (click)="addBudget()">Add Budget</button>
+      </div>
+      <div class="d-flex justify-content-center mt-3">
+        <button class="viewBudgets" (click)="viewBudget()" >View Budgets</button>
+      </div>
+      <div class="d-flex justify-content-center mt-3">
+         <h5 class="text-light">{{ findCurrentWallet.category }}</h5>
+      </div>
+      <div class="d-flex justify-content-center mt-3">
+         <h5 class="text-light">Wallet Amount:#{{ findCurrentWallet.amount }}:00</h5>
+      </div>
+      <div class="d-flex justify-content-center">
+         <h5 class="text-light">Remaining Wallet Balance: #{{findCurrentWallet.amount-findCurrentWallet.totalOfItems
+        }}:00</h5>
+      </div>
+
+      <div class="d-flex justify-content-center">
+         <h5 class="text-light">Items Total: #{{findCurrentWallet.totalOfItems
+          }}:00</h5>
+      </div>
+    </div>
+  </div>
+</div>
